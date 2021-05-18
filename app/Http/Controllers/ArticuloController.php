@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class ArticuloController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');  //para que no puedan entrar sin pasar por un registro previo
+    }
     /**
      * Display a listing of the resource.
      *
